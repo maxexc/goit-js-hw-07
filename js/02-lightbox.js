@@ -28,11 +28,3 @@ const gallery = new SimpleLightbox(".js-gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
-
-// function onImageClick(event) {
-//   event.preventDefault();
-//   let gallery = new SimpleLightbox(".js-gallery a", {
-//     captionsData: "alt",
-//     captionDelay: 250,
-//   });
-// }
