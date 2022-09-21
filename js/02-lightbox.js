@@ -5,9 +5,9 @@ console.log(galleryItems);
 
 const galleryRef = document.querySelector(".js-gallery");
 
-galleryRef.innerHTML = "";
+// galleryRef.innerHTML = "";
 galleryRef.insertAdjacentHTML("beforeend", makeImageList(galleryItems));
-galleryRef.addEventListener("click", onImageClick);
+// galleryRef.addEventListener("click", onImageClick);
 
 function makeImageList(galleryItems) {
   return galleryItems
@@ -24,10 +24,15 @@ function makeImageList(galleryItems) {
     .join("");
 }
 
-function onImageClick(event) {
-  event.preventDefault();
-  let gallery = new SimpleLightbox(".js-gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-}
+const gallery = new SimpleLightbox(".js-gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
+});
+
+// function onImageClick(event) {
+//   event.preventDefault();
+//   let gallery = new SimpleLightbox(".js-gallery a", {
+//     captionsData: "alt",
+//     captionDelay: 250,
+//   });
+// }
