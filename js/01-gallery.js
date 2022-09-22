@@ -37,9 +37,18 @@ function onImageClick(event) {
     `);
   instance.show();
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+  document.addEventListener("keydown", closeImgCard);
+
+  function closeImgCard(event) {
+    if (event.code === "Escape") {
       instance.close();
+      document.removeEventListener("keydown", closeImgCard);
     }
-  });
+  }
+
+  // document.addEventListener("keydown", (event) => {
+  //   if (event.key === "Escape") {
+  //     instance.close();
+  //   }
+  // });
 }
